@@ -1,5 +1,5 @@
 package telran.util.words;
-
+//IlyaL29
 public interface AutoCompletion {
 	boolean addWord(String word); //adds word, returns true if added,
 

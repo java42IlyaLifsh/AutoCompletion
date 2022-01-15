@@ -1,5 +1,5 @@
 package telran.util.words;
-
+//IlyaL29
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.Arrays;
@@ -36,7 +36,19 @@ class AutoCompletionTest {
 			
 		}
 		@Test
-		void testRemoveIf() {
+		void testRemoveIf_1() {
+			assertEquals(8, ((AutoCompletionMapImpl) autoCompletion).removeIf(p -> p.length() >= 3));
+			
+		}
+		@Test
+		void testRemoveIf_2() {
+			assertEquals(5, ((AutoCompletionMapImpl) autoCompletion)
+					.removeIf(p -> p.startsWith("ab") || p.startsWith("CC")));
+			
+		}
+		@Test
+		void testRemoveIf_3() {
+			assertEquals(0, ((AutoCompletionMapImpl) autoCompletion).removeIf(p -> p.endsWith("EEE")));
 			
 		}
 
