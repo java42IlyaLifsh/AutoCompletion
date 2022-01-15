@@ -33,7 +33,7 @@ HashMap<Character, TreeSet<String>> words = new HashMap<>(); //key - first chara
 
 	@Override
 	public Iterable<String> getCompletionOptions(String prefix) {
-		// TODO Auto-generated method stub
+		 
 		if(prefix.isEmpty()) {
 			return new TreeSet<String>();
 		}
